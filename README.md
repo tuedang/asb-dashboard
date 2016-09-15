@@ -1,4 +1,4 @@
-# Spring-Tiles-AdminLTE-Demo-App
+# Asb dashboard
 ### Spring MVC - Spring Data JPA - Spring Security - AdminLTE Bootstrap template - Apache Tile - Sample Application
 
 This is a demo for how to integrate Spring MCV with Apache Tiles and AdminLTE (a Bootstrap 3 based Admin Panel template).
