@@ -1,13 +1,10 @@
 package com.sanjay.springtiles.entity;
 
-import org.hibernate.validator.constraints.Email;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.Size;
+import java.util.Date;
 
 /**
  * Created by tuedang on 9/15/16.
@@ -16,17 +13,26 @@ import javax.validation.constraints.Size;
 @Table(name = "device_report")
 public class DeviceReport {
     @Id
-    @GeneratedValue
-    private Integer id;
+    @Column(name = "device_id")
+    private String id;
 
     @Column(name = "status")
     private String status;
 
-    public Integer getId() {
+    @Column(name = "lastUpdated")
+    private Date lastUpdated;
+
+    @Column(name = "category")
+    private String category;
+
+    @Column(name = "stream_status")
+    private String streamStatus; //NEW, CHANGE, VIEWED
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -38,5 +44,27 @@ public class DeviceReport {
         this.status = status;
     }
 
+    public Date getLastUpdated() {
+        return lastUpdated;
+    }
 
+    public void setLastUpdated(Date lastUpdated) {
+        this.lastUpdated = lastUpdated;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getStreamStatus() {
+        return streamStatus;
+    }
+
+    public void setStreamStatus(String streamStatus) {
+        this.streamStatus = streamStatus;
+    }
 }
