@@ -1,8 +1,8 @@
-package com.sanjay.springtiles.controller;
+package com.absolute.ht.controller;
 
-import com.sanjay.springtiles.entity.DeviceReport;
-import com.sanjay.springtiles.entity.User;
-import com.sanjay.springtiles.repository.DeviceReportRepository;
+import com.absolute.ht.entity.User;
+import com.absolute.ht.entity.DeviceReport;
+import com.absolute.ht.repository.DeviceReportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

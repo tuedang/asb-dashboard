@@ -1,19 +1,19 @@
 
-- !!com.sanjay.springtiles.entity.DeviceReport
+- !!com.absolute.ht.entity.DeviceReport
     id            :   "461787e6-c540-4efe-a703-cedec0b264b4"
     lastUpdated   :   "2016-05-20T07:00:00.000"
     category      :   "Theft Reported"
     status        :   "Under Review : First Contact Received"
     streamStatus  :   "VIEWED"
 
-- !!com.sanjay.springtiles.entity.DeviceReport
+- !!com.absolute.ht.entity.DeviceReport
     id            :   "4999885e-e49f-4f5d-bebb-d9962fd5c181"
     lastUpdated   :   "2016-07-08T10:17:00.000"
     category      :   "Theft Reported"
     status        :   "Under Investigation: Researching"
     streamStatus  :   "VIEWED"
 
-- !!com.sanjay.springtiles.entity.DeviceReport
+- !!com.absolute.ht.entity.DeviceReport
     id            :   "5945e7e4-27e4-4f8f-855b-47826b7dedb9"
     lastUpdated   :   "2016-06-17T09:25:53.793"
     category      :   "Frozen"

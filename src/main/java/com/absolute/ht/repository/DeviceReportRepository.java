@@ -1,7 +1,6 @@
-package com.sanjay.springtiles.repository;
+package com.absolute.ht.repository;
 
-import com.sanjay.springtiles.entity.DeviceReport;
-import com.sanjay.springtiles.entity.User;
+import com.absolute.ht.entity.DeviceReport;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DeviceReportRepository extends JpaRepository<DeviceReport, Integer> {

@@ -1,8 +1,8 @@
-package com.sanjay.springtiles.repository;
+package com.absolute.ht.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sanjay.springtiles.entity.Role;
+import com.absolute.ht.entity.Role;
 
 public interface RoleRepository extends JpaRepository<Role, Integer>{
 

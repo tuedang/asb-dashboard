@@ -1,8 +1,7 @@
-package com.sanjay.springtiles.repository;
+package com.absolute.ht.repository;
 
+import com.absolute.ht.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.sanjay.springtiles.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 	

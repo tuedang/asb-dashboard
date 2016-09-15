@@ -1,4 +1,4 @@
-package com.sanjay.springtiles.entity;
+package com.absolute.ht.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.sanjay.springtiles.entity;
+package com.absolute.ht.entity;
 
 public class StudentDTO {
 	private Integer id;

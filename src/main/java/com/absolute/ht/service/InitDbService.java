@@ -1,18 +1,19 @@
-package com.sanjay.springtiles.service;
+package com.absolute.ht.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
-import javax.transaction.Transactional;
-import com.sanjay.springtiles.repository.DeviceReportRepository;
+
+import com.absolute.ht.entity.Role;
+import com.absolute.ht.entity.User;
+import com.absolute.ht.repository.RoleRepository;
+import com.absolute.ht.repository.UserRepository;
+import com.absolute.ht.repository.DeviceReportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import com.sanjay.springtiles.entity.Role;
-import com.sanjay.springtiles.entity.User;
-import com.sanjay.springtiles.repository.RoleRepository;
-import com.sanjay.springtiles.repository.UserRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 @Service
