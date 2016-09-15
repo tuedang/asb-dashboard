@@ -22,8 +22,8 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-  
-  
+
+
 	<tilesx:useAttribute id="stylesheets" name="stylesheets" classname="java.util.List" />
 	<tilesx:useAttribute id="javascripts" name="javascripts" classname="java.util.List" />
 	
@@ -569,8 +569,13 @@
 
 <!-- jQuery 2.1.4 -->
 <script src="/resources/jquery/2.1.4/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/resources/bootstrap-table/bootstrap-table.css">
+<script src="/resources/bootstrap-table/bootstrap-table.js"></script>
+
 <!-- Bootstrap 3.3.5 -->
 <script src="/resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="/resources/momentjs/moment.min.js"></script>
 <!-- SlimScroll -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.6/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->

@@ -29,7 +29,7 @@ public class JsonProviderController {
 
     @RequestMapping(value = "/device/list", method = RequestMethod.GET,  produces = "application/json")
     public List<DeviceReport> listDeviceReport() {
-        return deviceReportRepository.findAll();
+        return deviceReportRepository.findAllByOrderByLastUpdatedDesc();
     }
 
     @RequestMapping(value = "/device/{id}", method = RequestMethod.GET,  produces = "application/json")
