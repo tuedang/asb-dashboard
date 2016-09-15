@@ -1,6 +1,9 @@
 package com.sanjay.springtiles.controller;
 
+import com.sanjay.springtiles.entity.DeviceReport;
 import com.sanjay.springtiles.entity.User;
+import com.sanjay.springtiles.repository.DeviceReportRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +17,9 @@ import java.util.List;
 @RestController
 @RequestMapping("rest")
 public class JsonProviderController {
+
+    @Autowired
+    private DeviceReportRepository deviceReportRepository;
 
     @RequestMapping(value = "/users", method = RequestMethod.GET,  produces = "application/json")
     public List<User> listAllUsers() {
@@ -29,5 +35,10 @@ public class JsonProviderController {
         u.setId(1);
         u.setEmail("haha@gmail.com");
         return u;
+    }
+
+    @RequestMapping(value = "/devicereports", method = RequestMethod.GET,  produces = "application/json")
+    public List<DeviceReport> deviceReport() {
+        return deviceReportRepository.findAll();
     }
 }
