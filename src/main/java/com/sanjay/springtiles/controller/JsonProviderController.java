@@ -1,30 +1,33 @@
 package com.sanjay.springtiles.controller;
 
 import com.sanjay.springtiles.entity.User;
-import com.sanjay.springtiles.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by tuedang on 9/15/16.
  */
 @RestController
+@RequestMapping("rest")
 public class JsonProviderController {
-    @Autowired
-    private UserService userService;
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
-    public ResponseEntity<List<User>> listAllUsers() {
-        List<User> users = userService.getAll();
-        if (users.isEmpty()) {
-            return new ResponseEntity<List<User>>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
-        }
-        return new ResponseEntity<List<User>>(users, HttpStatus.OK);
+    @RequestMapping(value = "/users", method = RequestMethod.GET,  produces = "application/json")
+    public List<User> listAllUsers() {
+        User u = user();
+        List<User> userList = new ArrayList<User>();
+        userList.add(u);
+        return userList;
+    }
+
+    @RequestMapping(value = "/user", method = RequestMethod.GET,  produces = "application/json")
+    public User user() {
+        User u = new User();
+        u.setId(1);
+        u.setEmail("haha@gmail.com");
+        return u;
     }
 }
