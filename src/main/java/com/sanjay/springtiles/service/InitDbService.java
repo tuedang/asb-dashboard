@@ -1,18 +1,14 @@
 package com.sanjay.springtiles.service;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
-
-import com.sanjay.springtiles.entity.DeviceReport;
 import com.sanjay.springtiles.repository.DeviceReportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import com.sanjay.springtiles.entity.Role;
 import com.sanjay.springtiles.entity.User;
 import com.sanjay.springtiles.repository.RoleRepository;
@@ -30,7 +26,6 @@ public class InitDbService {
 
     @Autowired
     private DeviceReportRepository deviceReportRepository;
-
 
     @PostConstruct
     public void init() {
@@ -55,12 +50,7 @@ public class InitDbService {
             userAdmin.setRoles(roles);
             userRepository.save(userAdmin);
 
-            DeviceReport deviceReport = new DeviceReport();
-            deviceReport.setId(1);
-            deviceReport.setStatus("ERROR");
-            deviceReportRepository.save(deviceReport);
-
-//            InitDataLoader.load(deviceReportRepository, "data/init-data.yml");
+            InitDataLoader.load(deviceReportRepository, "/data/devicereport-data.yml");
         }
 
     }

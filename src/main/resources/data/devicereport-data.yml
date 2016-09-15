@@ -1,0 +1,7 @@
+- !!com.sanjay.springtiles.entity.DeviceReport
+    id:   1
+    status: ERROR
+
+- !!com.sanjay.springtiles.entity.DeviceReport
+    id:   2
+    status: OK
