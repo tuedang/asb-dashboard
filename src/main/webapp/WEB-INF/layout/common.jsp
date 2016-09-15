@@ -199,27 +199,22 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<spring:url value='/resources/profile-pictures/${user.profileImage}'/>" class="img-circle" alt="User Image">
+          <img src="<spring:url value='/resources/profile-pictures/absolute.png'/>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><c:out value="${user.firstName} ${user.lastName}" /></p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
-      <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
+
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li class="header">MAIN NAVIGATION</li>
+        <li class="header">DDS 6</li>
+        <li>
+          <a href="../explore">
+            <i class="fa fa-th"></i> <span>Widgets</span>
+            <small class="label pull-right bg-green">Hot</small>
+          </a>
+        </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>

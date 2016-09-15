@@ -81,7 +81,7 @@
     <!-- Main row -->
     <div class="row">
       <!-- Left col -->
-      <section class="col-lg-7 connectedSortable">
+      <section class="col-lg-6 connectedSortable">
           <div class="row">
               <div class="col-xs-12">
                   <div class="box">
@@ -147,7 +147,7 @@
       <!-- /.Left col -->
 
       <!-- right col (We are only adding the ID to make the widgets sortable)-->
-      <section class="col-lg-5 connectedSortable">
+      <section class="col-lg-6 connectedSortable">
           <div class="row">
               <div class="col-xs-12">
                   <div class="box">
