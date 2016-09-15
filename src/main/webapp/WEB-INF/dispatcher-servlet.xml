@@ -28,7 +28,6 @@
 			value="org.springframework.web.servlet.view.tiles3.TilesView" />
 	</bean>
 	
-	<bean id="multipartResolver" 
-		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 
 </beans>
