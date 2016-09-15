@@ -138,6 +138,17 @@
                               </tr>
                           </table>
                       </div>
+
+                      <!-- /.box-body -->
+                  </div>
+                  <div class="box">
+                      <div class="box-header">
+                          <h3 class="box-title">Device reporting</h3>
+                      </div>
+                      <div class="box-body table-responsive no-padding table-no-bordered">
+                          <table id="filterTable" data-toggle="table" class="table table-no-bordered">
+                          </table>
+                      </div>
                       <!-- /.box-body -->
                   </div>
                   <!-- /.box -->
@@ -218,7 +229,7 @@
   <!-- /.content -->
 </div>
   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.min.js"></script>
+<script src="/resources/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript">
 
 $( document ).ready(function() {
@@ -226,8 +237,41 @@ $( document ).ready(function() {
 	var width = $("body").width() - 360;
 	var height = $("body").height() + 100;
 		
-	$("#twitter").width(width).height(height);	
-	
+	$("#twitter").width(width).height(height);
+
+    $('#filterTable').bootstrapTable({
+        url: '/rest/device/list',
+        columns: [{
+            field: 'esn',
+            title: 'ESN'
+        }, {
+            field: 'category',
+            title: 'Category',
+            formatter: function (data, row, index) {
+                var label;
+                switch(row.category) {
+                    case 'Frozen': label = 'label-warning'; break;
+                    case 'Policy - Errror': label = 'label-danger'; break;
+                    case 'Data At-Risk': label = 'label-primary'; break;
+                    default: label = 'label-success';break;
+                }
+
+                return $('<span>').addClass('label')
+                        .addClass(label)
+                        .text(data)
+                        .wrap('<p/>').parent().html();
+            }
+        }, {
+            field: 'lastUpdated',
+            title: 'Date',
+            formatter: function (data, row, index) {
+                return moment(data).format('DD/MM/YYYY h:mm:ss A');
+            }
+        }, {
+            field: 'status',
+            title: 'Reason'
+        }, ]
+    });
 });
 
 </script>

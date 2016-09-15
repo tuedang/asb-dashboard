@@ -25,6 +25,9 @@ public class DeviceReport {
     @Column(name = "category")
     private String category;
 
+    @Column(name = "esn")
+    private String esn;
+
     @Column(name = "stream_status")
     private String streamStatus; //NEW, CHANGE, VIEWED
 
@@ -67,4 +70,13 @@ public class DeviceReport {
     public void setStreamStatus(String streamStatus) {
         this.streamStatus = streamStatus;
     }
+
+    public String getEsn() {
+        return esn;
+    }
+
+    public void setEsn(String esn) {
+        this.esn = esn;
+    }
+
 }

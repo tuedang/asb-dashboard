@@ -4,6 +4,7 @@
     lastUpdated   :   "2016-05-20T07:00:00.000"
     category      :   "Theft Reported"
     status        :   "Under Review : First Contact Received"
+    esn           :   "esn1112223331"
     streamStatus  :   "VIEWED"
 
 - !!com.absolute.ht.entity.DeviceReport
@@ -11,6 +12,7 @@
     lastUpdated   :   "2016-07-08T10:17:00.000"
     category      :   "Theft Reported"
     status        :   "Under Investigation: Researching"
+    esn           :   "esn1112223332"
     streamStatus  :   "VIEWED"
 
 - !!com.absolute.ht.entity.DeviceReport
@@ -18,4 +20,21 @@
     lastUpdated   :   "2016-06-17T09:25:53.793"
     category      :   "Frozen"
     status        :   "Freeze Requested"
+    esn           :   "esn1112223333"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "08b62dd0-8175-49f1-b0c0-05232bf60421"
+    lastUpdated   :   "2016-08-15T03:18:33.366"
+    category      :   "Policy - Errror"
+    status        :   "The agent installer failed to download"
+    esn           :   "esn1112223334"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "e4481a90-6e5b-496e-b4d1-f08b0ff63432"
+    lastUpdated   :   "2016-07-01T03:18:33.366"
+    category      :   "Data At-Risk"
+    status        :   "Credit Card Number"
+    esn           :   "esn1112223335"
     streamStatus  :   "CHANGED"
