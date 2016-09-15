@@ -33,7 +33,7 @@
 
 	<title><tiles:getAsString name="title" /></title>
 </head>
-<body class="hold-transition fixed skin-purple sidebar-mini">
+<body class="hold-transition fixed skin-blue sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
 
