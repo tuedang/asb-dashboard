@@ -1,19 +1,18 @@
 package com.absolute.ht.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.annotation.PostConstruct;
-
 import com.absolute.ht.entity.Role;
 import com.absolute.ht.entity.User;
+import com.absolute.ht.repository.DeviceReportRepository;
 import com.absolute.ht.repository.RoleRepository;
 import com.absolute.ht.repository.UserRepository;
-import com.absolute.ht.repository.DeviceReportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.List;
 
 @Transactional
 @Service
