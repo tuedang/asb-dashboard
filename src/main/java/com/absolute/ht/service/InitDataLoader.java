@@ -1,4 +1,4 @@
-package com.sanjay.springtiles.service;
+package com.absolute.ht.service;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.yaml.snakeyaml.Yaml;

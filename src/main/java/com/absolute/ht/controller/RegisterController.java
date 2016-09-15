@@ -1,9 +1,12 @@
-package com.sanjay.springtiles.controller;
+package com.absolute.ht.controller;
 
 
 import java.util.List;
 
 import javax.validation.Valid;
+
+import com.absolute.ht.entity.User;
+import com.absolute.ht.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -17,9 +20,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import com.sanjay.springtiles.entity.User;
-import com.sanjay.springtiles.service.UserService;
 
 @Controller
 public class RegisterController {

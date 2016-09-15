@@ -11,7 +11,7 @@
 
     <mvc:resources location="/resources/" mapping="/resources/**"/>
 
-    <context:component-scan base-package="com.sanjay.springtiles.controller" />
+    <context:component-scan base-package="com.absolute.ht.controller" />
 
     <bean id="tilesConfigurer"
         class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
