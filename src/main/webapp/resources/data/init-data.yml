@@ -1,8 +1,0 @@
----
-
-users:
-
-  - !!com.sanjay.springtiles.entity.DeviceReport    &devicereport1
-      id:   2
-      status: OK
-
