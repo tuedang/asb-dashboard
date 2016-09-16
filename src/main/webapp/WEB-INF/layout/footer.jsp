@@ -3,11 +3,7 @@
 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      Copyright &copy; 2013-2014. AdminLTE - Bootstrap Template by <a href="http://almsaeedstudio.com">Almsaeed Studio</a>. All rights
+      Copyright &copy; 2016. Absolute Hackathon <a href="https://dv2corp1cc.absolute.com">N4</a>. All rights
     reserved.
-    </div>
-    <strong>Copyright &copy; 2015. Sanjay Rawat. <a href="https://github.com/RawSanj/spring-tiles-sample-app.git">Fork Me on Github</a>
-    
-    </strong> 
-    
+    </div><br>
   </footer>
