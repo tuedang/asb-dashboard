@@ -224,15 +224,13 @@
 <!-- jQuery 2.1.4 -->
 <script src="/resources/jquery/2.1.4/jquery.min.js"></script>
 
-<%--<link rel="stylesheet" href="/resources/bootstrap-table/bootstrap-table.css">--%>
-<%--<script src="/resources/bootstrap-table/bootstrap-table.js"></script>--%>
+<link rel="stylesheet" href="/resources/bootstrap-table/bootstrap-table.css">
+<script src="/resources/bootstrap-table/bootstrap-table.js"></script>
+<link rel="stylesheet" href="/resources/app/app-style.css">
 
 <!-- Bootstrap 3.3.7 -->
 <script src="/resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 <script src="/resources/momentjs/moment.min.js"></script>
-<!-- DataTables -->
-<script src="/resources/js/jquery.dataTables.min.js"></script>
-<script src="/resources/js/dataTables.bootstrap.min.js"></script>
 <!-- SlimScroll -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.6/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
