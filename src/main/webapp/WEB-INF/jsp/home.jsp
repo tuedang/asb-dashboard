@@ -20,6 +20,7 @@
         <!-- small box -->
         <div class="small-box bg-red">
           <div class="inner">
+            <span class="new-box-stream label label-danger">-1</span>
             <h3>150</h3>
             <p>Theft Reported</p>
           </div>
@@ -31,7 +32,8 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <span class="new-box-stream label label-danger"></span>
+              <h3>53<sup style="font-size: 20px">%</sup></h3>
             <p>Frozen</p>
           </div>
           <a href="#" class="small-box-footer" data-filter="Frozen">More info <i class="fa fa-arrow-circle-right"></i></a>
@@ -42,6 +44,7 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
           <div class="inner">
+              <span class="new-box-stream label label-danger"></span>
             <h3>44</h3>
             <p>Policy - Error</p>
           </div>
@@ -53,6 +56,7 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
+              <span class="new-box-stream label label-warning"></span>
             <h3>65</h3>
             <p>Data At-Risk</p>
           </div>
@@ -99,36 +103,57 @@ $( document ).ready(function() {
 //
 //	$("#twitter").width(width).height(height);
 
+    var categoryClasses = {
+        'Theft Reported': 'info',
+        'Frozen': 'primary',
+        'Policy - Errror': 'warning',
+        'Data At-Risk': 'danger'
+    };
+
+    var statusClasses = {
+        'changed': 'success',
+        'viewedx': 'info',
+        '1': 'success',
+        '2': 'warning',
+        '3': 'danger'
+    };
+
     var table_filter_query = '';
     var $filterTable = $('#filterTable');
 
-    $.getJSON('/rest/device/status', function (statuses) {
-        $.each(statuses, function (index, statusObj) {
-            $deviceBoxElement = $('.device-box')
-                    .find('[data-filter="'+ statusObj.status +'"]')
-                    .parents('div.category');
-            $deviceBoxElement.find('.inner h3').text(statusObj.quantity);
+    function loadHeaderBox() {
+        $.getJSON('/rest/device/status', function (statuses) {
+            $.each(statuses, function (index, statusObj) {
+                $deviceBoxElement = $('.device-box')
+                        .find('[data-filter="'+ statusObj.status +'"]')
+                        .parents('div.category');
+                $deviceBoxElement.find('.inner h3').text(statusObj.quantity);
+                if (statusObj.newStream != 0) {
+                    $deviceBoxElement.find('span.new-box-stream').text(statusObj.newStream);
+                } else {
+                    $deviceBoxElement.find('span.new-box-stream').empty();
+                }
+            });
         });
-    });
+    };
+    loadHeaderBox();
 
     $filterTable.bootstrapTable({
         url: '/rest/device/list',
         queryParams: function (p) {
             return { cat: table_filter_query };
         },
+        onClickRow: function (item, $element) {
+            if(item.streamStatus=='VIEWED') return;
+            $.post('/rest/device/'+ item.id+'/viewed', {}, function (data) {
+                loadHeaderBox();
+                $element.removeClass(statusClasses['changed']);
+            });
+        },
         rowStyle: function (row, index) {
-            var statusClasses = {
-                'changed': 'active',
-                'viewed': 'info',
-                '1': 'success',
-                '2': 'warning',
-                '3': 'danger'
-            };
             var useStyle = statusClasses[row.streamStatus.toLowerCase()];
             if (useStyle != null) {
-                return {
-                    classes: useStyle
-                };
+                return {classes: useStyle};
             }
             return {};
         },
@@ -139,16 +164,8 @@ $( document ).ready(function() {
             field: 'category',
             title: 'Category',
             formatter: function (data, row, index) {
-                var label;
-                switch(row.category) {
-                    case 'Frozen': label = 'label-primary'; break;
-                    case 'Policy - Error': label = 'label-warning'; break;
-                    case 'Data At-Risk': label = 'label-success'; break;
-                    default: label = 'label-danger';break;
-                }
-
                 return $('<span>')
-                        .addClass('label').addClass(label)
+                        .addClass('label').addClass('label-'+categoryClasses[row.category])
                         .text(data)
                         .wrap('<p/>').parent().html();
             }

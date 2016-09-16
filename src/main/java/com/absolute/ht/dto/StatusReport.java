@@ -8,15 +8,17 @@ public class StatusReport {
     public StatusReport() {
     }
 
-    public StatusReport(String status, Integer quantity, Integer priority) {
+    public StatusReport(String status, Integer quantity, Integer priority, Integer newStream) {
         this.status = status;
         this.quantity = quantity;
         this.priority = priority;
+        this.newStream = newStream;
     }
 
     private String status;
     private Integer quantity;
     private Integer priority;
+    private Integer newStream;
 
     public String getStatus() {
         return status;
@@ -40,5 +42,13 @@ public class StatusReport {
 
     public void setPriority(Integer priority) {
         this.priority = priority;
+    }
+
+    public Integer getNewStream() {
+        return newStream;
+    }
+
+    public void setNewStream(Integer newStream) {
+        this.newStream = newStream;
     }
 }

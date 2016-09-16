@@ -29,7 +29,7 @@ public class JsonProviderController {
     @Autowired
     private DeviceReportRepository deviceReportRepository;
 
-    @RequestMapping(value = "/device/{deviceId}/viewed", method = RequestMethod.PUT,  produces = "application/json")
+    @RequestMapping(value = "/device/{deviceId}/viewed", method = RequestMethod.POST, produces = "application/json")
     public DeviceReport markAsRead(@PathVariable("deviceId") String deviceId) {
         DeviceReport deviceReport = deviceReportRepository.findOne(deviceId);
         deviceReport.setStreamStatus(DeviceReport.STREAM_VIEWED);
@@ -54,16 +54,20 @@ public class JsonProviderController {
     public List<StatusReport> countStatus() {
         StatusReport theftReport = new StatusReport(CATEGORY_THEFT_REPORT,
                 deviceReportRepository.countByCategory(CATEGORY_THEFT_REPORT),
-                1);
+                1,
+                deviceReportRepository.countByCategoryAndStreamStatus(CATEGORY_THEFT_REPORT, DeviceReport.STREAM_CHANGED));
         StatusReport frozen = new StatusReport(CATEGORY_FROZEN,
                 deviceReportRepository.countByCategory(CATEGORY_FROZEN),
-                2);
+                2,
+                deviceReportRepository.countByCategoryAndStreamStatus(CATEGORY_FROZEN, DeviceReport.STREAM_CHANGED));
         StatusReport policyError = new StatusReport(CATEGORY_POLICY_ERROR,
                 deviceReportRepository.countByCategory(CATEGORY_POLICY_ERROR),
-                3);
+                3,
+                deviceReportRepository.countByCategoryAndStreamStatus(CATEGORY_POLICY_ERROR, DeviceReport.STREAM_CHANGED));
         StatusReport dataAtRisk = new StatusReport(CATEGORY_DATA_AT_RISK,
                 deviceReportRepository.countByCategory(CATEGORY_DATA_AT_RISK),
-                4);
+                4,
+                deviceReportRepository.countByCategoryAndStreamStatus(CATEGORY_DATA_AT_RISK, DeviceReport.STREAM_CHANGED));
         return Arrays.asList(theftReport, frozen, policyError, dataAtRisk);
     }
 }

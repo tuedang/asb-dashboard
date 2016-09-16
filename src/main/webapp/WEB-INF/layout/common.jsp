@@ -39,7 +39,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../home.jsp" class="logo">
+    <a href="/" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>bs</span>
       <!-- logo for regular state and mobile devices -->
@@ -70,7 +70,7 @@
                 <ul class="menu">
                   <li>
                     <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                      <i class="fa fa-users text-aqua"></i> 5 devices change status today
                     </a>
                   </li>
                 </ul>
@@ -160,7 +160,7 @@
           </ul>
         </li>
         <li class="header">DDS 5</li>
-        <li><a href="#"><i class="fa fa-home"></i> <span>Home</span></a></li>
+        <li><a href="/"><i class="fa fa-home"></i> <span>Home</span></a></li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-stack-overflow"></i> <span>Reports</span> <i class="fa fa-angle-left pull-right"></i>

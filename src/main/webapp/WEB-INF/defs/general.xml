@@ -31,13 +31,6 @@
 		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
 		<put-list-attribute name="stylesheets">
 			<add-attribute value="/resources/css/AdminLTE.min.css" />
-<!--             <add-attribute value="/resources/css/skins/skin-purple.min.css" /> -->
-<!--             <add-attribute value="/resources/css/skins/skin-purple.min.css" /> -->
-<!--             <add-attribute value="/resources/css/skins/skin-black.min.css" /> -->
-<!--             <add-attribute value="/resources/css/skins/skin-blue.min.css" /> -->
-<!--             <add-attribute value="/resources/css/skins/skin-red.min.css" /> -->
-<!--             <add-attribute value="/resources/css/skins/skin-yellow.min.css" /> -->
-<!--             <add-attribute value="/resources/css/skins/skin-green.min.css" /> -->
             <add-attribute value="/resources/css/skins/_all-skins.min.css" />
         </put-list-attribute>
         <put-list-attribute name="javascripts">
@@ -64,9 +57,11 @@
 		<put-attribute name="title" value="ASB Dashboard" />
 		<put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
 	</definition>
-	
-	
-	
+
+	<definition name="email" extends="common">
+		<put-attribute name="title" value="ASB Dashboard" />
+		<put-attribute name="body" value="/WEB-INF/jsp/email.jsp" />
+	</definition>
 	
 		
 	<!-- 	Mapping for Error Pages -->
@@ -77,9 +72,5 @@
 	<definition name="error500" extends="common">
 		<put-attribute name="title" value="Tracker Tool" />
 		<put-attribute name="body" value="/WEB-INF/jsp/errorpages/page_500.jsp" />
-	</definition>	
-	
-	
-
-
+	</definition>
 </tiles-definitions>
