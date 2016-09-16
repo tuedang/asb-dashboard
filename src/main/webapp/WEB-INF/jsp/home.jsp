@@ -52,7 +52,7 @@
           <div class="inner">
               <span class="new-box-stream label label-warning"></span>
             <h3>44</h3>
-            <p>Device Policies - Error</p>
+            <p>Device Policies</p>
           </div>
           <a href="#" class="small-box-footer" data-filter="Device Policies">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -64,7 +64,7 @@
           <div class="inner">
               <span class="new-box-stream label label-success"></span>
             <h3>65</h3>
-            <p>App & Data At-Risk</p>
+            <p>Apps & Data At-Risk</p>
           </div>
           <a href="#" class="small-box-footer" data-filter="Apps & Data At-Risk">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
