@@ -52,7 +52,7 @@
           <div class="inner">
               <span class="new-box-stream label label-danger"></span>
             <h3>44</h3>
-            <p>Policy - Error</p>
+            <p>Device Policies - Error</p>
           </div>
           <a href="#" class="small-box-footer" data-filter="Device Policies">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
