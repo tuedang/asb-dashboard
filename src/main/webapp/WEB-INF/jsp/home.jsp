@@ -222,6 +222,7 @@ $( document ).ready(function() {
             return { cat: table_filter_query };
         },
         onClickRow: function (item, $element) {
+            if(item.streamStatus=='VIEWED') return;
             $.post('/rest/device/'+ item.id+'/viewed', {}, function (data) {
                 loadHeaderBox();
                 $element.removeClass(statusClasses['changed']);
