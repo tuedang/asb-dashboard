@@ -3,3 +3,8 @@
 .status-changed{
     background-color: #00a65a;
 }
+
+.new-box-stream:not(:empty) {
+    float:right;
+    font-size: 190%;
+}

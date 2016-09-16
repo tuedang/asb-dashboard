@@ -14,7 +14,7 @@ import java.util.Date;
 public class DeviceReport {
     //bad code, but...no worry
     public static final String STREAM_VIEWED = "VIEWED";
-    public static final String STREAM_CHANGED = "CHANGE";
+    public static final String STREAM_CHANGED = "CHANGED";
 
     @Id
     @Column(name = "device_id")
