@@ -572,6 +572,7 @@
 
 <link rel="stylesheet" href="/resources/bootstrap-table/bootstrap-table.css">
 <script src="/resources/bootstrap-table/bootstrap-table.js"></script>
+<link rel="stylesheet" href="/resources/app/app-style.css">
 
 <!-- Bootstrap 3.3.5 -->
 <script src="/resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>

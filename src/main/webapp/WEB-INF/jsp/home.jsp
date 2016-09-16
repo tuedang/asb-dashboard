@@ -177,7 +177,6 @@ $( document ).ready(function() {
 //
 //	$("#twitter").width(width).height(height);
 
-
     var table_filter_query = '';
     var $filterTable = $('#filterTable');
 
@@ -194,6 +193,22 @@ $( document ).ready(function() {
         url: '/rest/device/list',
         queryParams: function (p) {
             return { cat: table_filter_query };
+        },
+        rowStyle: function (row, index) {
+            var statusClasses = {
+                'changed': 'active',
+                'viewed': 'info',
+                '1': 'success',
+                '2': 'warning',
+                '3': 'danger'
+            };
+            var useStyle = statusClasses[row.streamStatus.toLowerCase()];
+            if (useStyle != null) {
+                return {
+                    classes: useStyle
+                };
+            }
+            return {};
         },
         columns: [{
             field: 'esn',

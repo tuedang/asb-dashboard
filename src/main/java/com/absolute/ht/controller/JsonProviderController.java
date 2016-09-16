@@ -30,7 +30,7 @@ public class JsonProviderController {
     private DeviceReportRepository deviceReportRepository;
 
     @RequestMapping(value = "/device/list", method = RequestMethod.GET,  produces = "application/json")
-    public List<DeviceReport> listDeviceReport(@RequestParam("cat") String category) {
+    public List<DeviceReport> listDeviceReport(@RequestParam(value = "cat", required=false) String category) {
         if(!StringUtils.isEmpty(category)) {
             return deviceReportRepository.findByCategoryOrderByLastUpdatedDesc(category);
         } else {
