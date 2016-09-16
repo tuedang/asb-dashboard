@@ -29,6 +29,13 @@ public class JsonProviderController {
     @Autowired
     private DeviceReportRepository deviceReportRepository;
 
+    @RequestMapping(value = "/device/{deviceId}/viewed", method = RequestMethod.PUT,  produces = "application/json")
+    public DeviceReport markAsRead(@PathVariable("deviceId") String deviceId) {
+        DeviceReport deviceReport = deviceReportRepository.findOne(deviceId);
+        deviceReport.setStreamStatus(DeviceReport.STREAM_VIEWED);
+        return deviceReportRepository.save(deviceReport);
+    }
+
     @RequestMapping(value = "/device/list", method = RequestMethod.GET,  produces = "application/json")
     public List<DeviceReport> listDeviceReport(@RequestParam(value = "cat", required=false) String category) {
         if(!StringUtils.isEmpty(category)) {

@@ -12,6 +12,10 @@ import java.util.Date;
 @Entity
 @Table(name = "device_report")
 public class DeviceReport {
+    //bad code, but...no worry
+    public static final String STREAM_VIEWED = "VIEWED";
+    public static final String STREAM_CHANGED = "CHANGE";
+
     @Id
     @Column(name = "device_id")
     private String id;
