@@ -28,7 +28,7 @@
           <div class="inner">
             <span class="new-box-stream label label-danger">-1</span>
             <h3>150</h3>
-            <p>Theft Reported</p>
+            <p>Theft Report</p>
           </div>
           <a href="#" class="small-box-footer" data-filter="Theft Report">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -38,9 +38,9 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-              <span class="new-box-stream label label-danger"></span>
+              <span class="new-box-stream label bg-aqua"></span>
               <h3>53<sup style="font-size: 20px">%</sup></h3>
-            <p>Frozen</p>
+            <p>Device Freeze</p>
           </div>
           <a href="#" class="small-box-footer" data-filter="Device Freeze">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -50,7 +50,7 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
           <div class="inner">
-              <span class="new-box-stream label label-danger"></span>
+              <span class="new-box-stream label label-warning"></span>
             <h3>44</h3>
             <p>Policy - Error</p>
           </div>
@@ -62,9 +62,9 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
-              <span class="new-box-stream label label-warning"></span>
+              <span class="new-box-stream label label-success"></span>
             <h3>65</h3>
-            <p>Data At-Risk</p>
+            <p>App & Data At-Risk</p>
           </div>
           <a href="#" class="small-box-footer" data-filter="Apps & Data At-Risk">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -110,10 +110,10 @@ $( document ).ready(function() {
 //	$("#twitter").width(width).height(height);
 
     var categoryClasses = {
-        'Theft Report': 'info',
+        'Theft Report': 'danger',
         'Device Freeze': 'primary',
         'Device Policies': 'warning',
-        'Apps & Data At-Risk': 'danger'
+        'Apps & Data At-Risk': 'success'
     };
 
     var statusClasses = {
