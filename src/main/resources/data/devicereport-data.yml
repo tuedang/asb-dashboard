@@ -2,7 +2,7 @@
 - !!com.absolute.ht.entity.DeviceReport
     id            :   "461787e6-c540-4efe-a703-cedec0b264b4"
     lastUpdated   :   "2016-05-20T07:00:00.000"
-    category      :   "Theft Reported"
+    category      :   "Theft Report"
     status        :   "Under Review : First Contact Received"
     esn           :   "esn1112223331"
     streamStatus  :   "VIEWED"
@@ -10,31 +10,244 @@
 - !!com.absolute.ht.entity.DeviceReport
     id            :   "4999885e-e49f-4f5d-bebb-d9962fd5c181"
     lastUpdated   :   "2016-07-08T10:17:00.000"
-    category      :   "Theft Reported"
+    category      :   "Theft Report"
     status        :   "Under Investigation: Researching"
     esn           :   "esn1112223332"
     streamStatus  :   "VIEWED"
 
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "aed48110-f2d6-4726-b864-0c8d7ff4cfb1"
+    lastUpdated   :   "2016-08-02T07:45:00.000"
+    category      :   "Theft Report"
+    status        :   "Awaiting Customer: Require Information"
+    esn           :   "esn1112223332"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "360637e8-d7fb-4740-86b4-146851f38205"
+    lastUpdated   :   "2016-05-30T09:44:00.000"
+    category      :   "Theft Report"
+    status        :   "Awaiting Device Movement"
+    esn           :   "esn1112223332"
+    streamStatus  :   "CHANGED"
+
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "3e5a7a1d-1b3e-43e7-8192-4b264c87921b"
+    lastUpdated   :   "2016-07-13T06:18:02.000"
+    category      :   "Theft Report"
+    status        :   "Police Unable to Pursue"
+    esn           :   "esn1112223332"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "5f6d5a76-05d2-40e6-9b8e-b36b3747851b"
+    lastUpdated   :   "2016-06-24T02:16:55.151"
+    category      :   "Theft Report"
+    status        :   "Retrieved-Not Stolen"
+    esn           :   "esn1112223332"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "93ca0546-7f81-4a8e-a852-b7aec6423d8b"
+    lastUpdated   :   "2016-07-05T11:23:50.744"
+    category      :   "Theft Report"
+    status        :   "Cancelled"
+    esn           :   "esn1112223332"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "3259d5bd-73b8-4475-86cf-a8f68e0b0d34"
+    lastUpdated   :   "2016-01-29T04:36:00.000"
+    category      :   "Theft Report"
+    status        :   "Police Recovered"
+    esn           :   "esn1112223332"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "77832f35-7c5d-435b-a10a-c87f8109e67a"
+    lastUpdated   :   "2016-08-17T10:40:00.000"
+    category      :   "Theft Report"
+    status        :   "Recovered"
+    esn           :   "esn1112223332"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "cd2dd43f-27fb-47a9-9217-e28fb5fac864"
+    lastUpdated   :   "2016-05-24T10:32:24.903"
+    category      :   "Theft Report"
+    status        :   "No Contact from Device"
+    esn           :   "esn1112223332"
+    streamStatus  :   "CHANGED"
+
+
 - !!com.absolute.ht.entity.DeviceReport
     id            :   "5945e7e4-27e4-4f8f-855b-47826b7dedb9"
     lastUpdated   :   "2016-06-17T09:25:53.793"
-    category      :   "Frozen"
+    category      :   "Device Freeze"
     status        :   "Freeze Requested"
+    esn           :   "esn1112223333"
+    streamStatus  :   "CHANGED"
+
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "0702b78b-11f2-495b-b927-e4cd2680eb46"
+    lastUpdated   :   "2016-08-23T11:20:12.879"
+    category      :   "Device Freeze"
+    status        :   "The request has been removed from Summary report"
+    esn           :   "esn1112223333"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "3150b6a9-bf9c-4ec8-b25a-59ee6401aa94"
+    lastUpdated   :   "2016-05-11T11:08:00.000"
+    category      :   "Device Freeze"
+    status        :   "Unfreeze Requested"
+    esn           :   "esn1112223333"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "b82385c0-8934-4f2c-938f-85182beaf58a"
+    lastUpdated   :   "2016-05-26T07:00:00.000"
+    category      :   "Device Freeze"
+    status        :   "Wait to device download policy"
+    esn           :   "esn1112223333"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "34e8135a-e7f5-4d0b-8dea-d2393f2e37d0"
+    lastUpdated   :   "2016-07-07T05:09:49.621"
+    category      :   "Device Freeze"
+    status        :   "Unfrozen via Client Passcode"
+    esn           :   "esn1112223333"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "98942af5-2f54-48a9-9e60-52b3cc4b0a80"
+    lastUpdated   :   "2016-05-24T09:20:00.000"
+    category      :   "Device Freeze"
+    status        :   "Frozen"
+    esn           :   "esn1112223333"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "93f605ce-0152-4c25-9c80-2d8e6d9baefb"
+    lastUpdated   :   "2016-05-26T08:01:39.825"
+    category      :   "Device Freeze"
+    status        :   "Pend wait data delete request finish first"
+    esn           :   "esn1112223333"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "0ae66462-636d-4d80-9394-116a5c06c0cf"
+    lastUpdated   :   "2016-05-26T04:33:11.196"
+    category      :   "Device Freeze"
+    status        :   "Unfrozen via Agent Call"
+    esn           :   "esn1112223333"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "d3a82539-7519-498c-a568-4a9828ff80c3"
+    lastUpdated   :   "2016-07-06T02:23:01.786"
+    category      :   "Device Freeze"
+    status        :   "Cancelled"
+    esn           :   "esn1112223333"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "04c657bf-8547-4eea-b20c-8a35e0f5637a"
+    lastUpdated   :   "2016-07-15T03:18:33.366"
+    category      :   "Device Freeze"
+    status        :   "Offline Frozen"
     esn           :   "esn1112223333"
     streamStatus  :   "CHANGED"
 
 - !!com.absolute.ht.entity.DeviceReport
     id            :   "08b62dd0-8175-49f1-b0c0-05232bf60421"
     lastUpdated   :   "2016-08-15T03:18:33.366"
-    category      :   "Policy - Errror"
+    category      :   "Device Policies"
     status        :   "The agent installer failed to download"
+    esn           :   "esn1112223334"
+    streamStatus  :   "CHANGED"
+
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "e54892b8-22fa-496c-b546-e932299be116"
+    lastUpdated   :   "2016-08-15T03:18:33.366"
+    category      :   "Device Policies"
+    status        :   "The provider failed to download"
+    esn           :   "esn1112223334"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "4de07447-0108-4c63-9d5e-203adf402d59"
+    lastUpdated   :   "2016-08-15T03:18:33.366"
+    category      :   "Device Policies"
+    status        :   "The agent installer failed to download"
+    esn           :   "esn1112223334"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "4bec6a85-f7d8-4aba-8a79-4a860d0769c2"
+    lastUpdated   :   "2016-08-15T03:18:33.366"
+    category      :   "Device Policies"
+    status        :   "Installation of provider or agent failed"
+    esn           :   "esn1112223334"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "3c0d49af-c2dd-4f59-b709-03a065883687"
+    lastUpdated   :   "2016-08-15T03:18:33.366"
+    category      :   "Device Policies"
+    status        :   "Repair of component failed"
+    esn           :   "esn1112223334"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "64abdb87-0445-4742-bba6-2d9eca93fd2c"
+    lastUpdated   :   "2016-08-15T03:18:33.366"
+    category      :   "Device Policies"
+    status        :   "Uninstall of component failed"
+    esn           :   "esn1112223334"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "2325d1ca-4468-4de2-bd71-010682e27393"
+    lastUpdated   :   "2016-08-15T03:18:33.366"
+    category      :   "Device Policies"
+    status        :   "Failed to download policy"
+    esn           :   "esn1112223334"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "399871c2-9336-43b6-b9f4-af9478b122ee"
+    lastUpdated   :   "2016-08-15T03:18:33.366"
+    category      :   "Device Policies"
+    status        :   "Failed to apply policy to component"
+    esn           :   "esn1112223334"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "998d3204-9169-42b5-a829-f6e2caa60762"
+    lastUpdated   :   "2016-08-15T03:18:33.366"
+    category      :   "Device Policies"
+    status        :   "Component failed to post results"
+    esn           :   "esn1112223334"
+    streamStatus  :   "CHANGED"
+
+- !!com.absolute.ht.entity.DeviceReport
+    id            :   "a5255d22-bc97-4459-a95e-a8226bf49485"
+    lastUpdated   :   "2016-08-15T03:18:33.366"
+    category      :   "Device Policies"
+    status        :   "Uninstall of component failed"
     esn           :   "esn1112223334"
     streamStatus  :   "CHANGED"
 
 - !!com.absolute.ht.entity.DeviceReport
     id            :   "e4481a90-6e5b-496e-b4d1-f08b0ff63432"
     lastUpdated   :   "2016-07-01T03:18:33.366"
-    category      :   "Data At-Risk"
+    category      :   "Apps & Data At-Risk"
     status        :   "Credit Card Number"
     esn           :   "esn1112223335"
     streamStatus  :   "CHANGED"

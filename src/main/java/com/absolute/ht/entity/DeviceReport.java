@@ -16,6 +16,11 @@ public class DeviceReport {
     public static final String STREAM_VIEWED = "VIEWED";
     public static final String STREAM_CHANGED = "CHANGED";
 
+    public static final String CATEGORY_THEFT_REPORT = "Theft Report";
+    public static final String CATEGORY_FROZEN = "Device Freeze";
+    public static final String CATEGORY_POLICY_ERROR = "Device Policies";
+    public static final String CATEGORY_DATA_AT_RISK = "Apps & Data At-Risk";
+
     @Id
     @Column(name = "device_id")
     private String id;

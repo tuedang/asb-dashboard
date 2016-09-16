@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.List;
+import static com.absolute.ht.entity.DeviceReport.*;
 
 /**
  * Created by tuedang on 9/15/16.
@@ -20,11 +21,6 @@ import java.util.List;
 @RestController
 @RequestMapping("rest")
 public class JsonProviderController {
-
-    private static final String CATEGORY_THEFT_REPORT = "Theft Reported";
-    private static final String CATEGORY_FROZEN = "Frozen";
-    private static final String CATEGORY_POLICY_ERROR = "Policy - Errror";
-    private static final String CATEGORY_DATA_AT_RISK = "Data At-Risk";
 
     @Autowired
     private DeviceReportRepository deviceReportRepository;

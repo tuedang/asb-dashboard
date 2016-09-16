@@ -14,6 +14,12 @@
 
   <!-- Main content -->
   <section class="content">
+      <!--
+      'Theft Reported': 'info',
+        'Device Freeze': 'primary',
+        'Device Policies': 'warning',
+        'Apps & Data At-Risk': 'danger'
+      -->
     <!-- Small boxes (Stat box) -->
     <div class="row device-box">
       <div class="col-lg-3 col-xs-6 theft-report category">
@@ -27,7 +33,7 @@
           <div class="icon">
             <i class="ion ion-bag"></i>
           </div>
-          <a href="#" class="small-box-footer" data-filter="Theft Reported">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer" data-filter="Theft Report">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -42,7 +48,7 @@
           <div class="icon">
             <i class="ion ion-stats-bars"></i>
           </div>
-          <a href="#" class="small-box-footer" data-filter="Frozen">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer" data-filter="Device Freeze">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -57,7 +63,7 @@
           <div class="icon">
             <i class="ion ion-person-add"></i>
           </div>
-          <a href="#" class="small-box-footer" data-filter="Policy - Errror">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer" data-filter="Device Policies">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -72,7 +78,7 @@
           <div class="icon">
             <i class="ion ion-pie-graph"></i>
           </div>
-          <a href="#" class="small-box-footer" data-filter="Data At-Risk">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer" data-filter="Apps & Data At-Risk">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -182,10 +188,10 @@ $( document ).ready(function() {
 //	$("#twitter").width(width).height(height);
 
     var categoryClasses = {
-        'Theft Reported': 'info',
-        'Frozen': 'primary',
-        'Policy - Errror': 'warning',
-        'Data At-Risk': 'danger'
+        'Theft Report': 'info',
+        'Device Freeze': 'primary',
+        'Device Policies': 'warning',
+        'Apps & Data At-Risk': 'danger'
     };
 
     var statusClasses = {
