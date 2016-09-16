@@ -4,9 +4,11 @@ import com.absolute.ht.dto.StatusReport;
 import com.absolute.ht.entity.DeviceReport;
 import com.absolute.ht.repository.DeviceReportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
@@ -28,8 +30,12 @@ public class JsonProviderController {
     private DeviceReportRepository deviceReportRepository;
 
     @RequestMapping(value = "/device/list", method = RequestMethod.GET,  produces = "application/json")
-    public List<DeviceReport> listDeviceReport() {
-        return deviceReportRepository.findAllByOrderByLastUpdatedDesc();
+    public List<DeviceReport> listDeviceReport(@RequestParam("cat") String category) {
+        if(!StringUtils.isEmpty(category)) {
+            return deviceReportRepository.findByCategoryOrderByLastUpdatedDesc(category);
+        } else {
+            return deviceReportRepository.findAllByOrderByLastUpdatedDesc();
+        }
     }
 
     @RequestMapping(value = "/device/{id}", method = RequestMethod.GET,  produces = "application/json")

@@ -15,64 +15,60 @@
   <!-- Main content -->
   <section class="content">
     <!-- Small boxes (Stat box) -->
-    <div class="row">
-      <div class="col-lg-3 col-xs-6">
+    <div class="row device-box">
+      <div class="col-lg-3 col-xs-6 theft-report category">
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
             <h3>150</h3>
-
-            <p>New Orders</p>
+            <p>Theft Reported</p>
           </div>
           <div class="icon">
             <i class="ion ion-bag"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer" data-filter="Theft Reported">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-3 col-xs-6 frozen category">
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
             <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-            <p>Bounce Rate</p>
+            <p>Frozen</p>
           </div>
           <div class="icon">
             <i class="ion ion-stats-bars"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer" data-filter="Frozen">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-3 col-xs-6 policy-error category">
         <!-- small box -->
         <div class="small-box bg-yellow">
           <div class="inner">
             <h3>44</h3>
-
-            <p>User Registrations</p>
+            <p>Policy - Error</p>
           </div>
           <div class="icon">
             <i class="ion ion-person-add"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer" data-filter="Policy - Errror">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-3 col-xs-6 data-at-risk category">
         <!-- small box -->
         <div class="small-box bg-red">
           <div class="inner">
             <h3>65</h3>
-
-            <p>Unique Visitors</p>
+            <p>Data At-Risk</p>
           </div>
           <div class="icon">
             <i class="ion ion-pie-graph"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer" data-filter="Data At-Risk">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -84,7 +80,7 @@
       <section class="col-lg-7 connectedSortable">
           <div class="row">
               <div class="col-xs-12">
-                  <div class="box">
+                  <div class="box hidden">
                       <div class="box-header">
                           <h3 class="box-title">Responsive Hover Table</h3>
 
@@ -149,7 +145,6 @@
                           <table id="filterTable" data-toggle="table" class="table table-no-bordered">
                           </table>
                       </div>
-                      <!-- /.box-body -->
                   </div>
                   <!-- /.box -->
               </div>
@@ -234,13 +229,29 @@
 
 $( document ).ready(function() {
 	
-	var width = $("body").width() - 360;
-	var height = $("body").height() + 100;
-		
-	$("#twitter").width(width).height(height);
+//	var width = $("body").width() - 360;
+//	var height = $("body").height() + 100;
+//
+//	$("#twitter").width(width).height(height);
 
-    $('#filterTable').bootstrapTable({
+
+    var table_filter_query = '';
+    var $filterTable = $('#filterTable');
+
+    $.getJSON('/rest/device/status', function (statuses) {
+        $.each(statuses, function (index, statusObj) {
+            $deviceBoxElement = $('.device-box')
+                    .find('[data-filter="'+ statusObj.status +'"]')
+                    .parents('div.category');
+            $deviceBoxElement.find('.inner h3').text(statusObj.quantity);
+        });
+    });
+
+    $filterTable.bootstrapTable({
         url: '/rest/device/list',
+        queryParams: function (p) {
+            return { cat: table_filter_query };
+        },
         columns: [{
             field: 'esn',
             title: 'ESN'
@@ -256,8 +267,8 @@ $( document ).ready(function() {
                     default: label = 'label-success';break;
                 }
 
-                return $('<span>').addClass('label')
-                        .addClass(label)
+                return $('<span>')
+                        .addClass('label').addClass(label)
                         .text(data)
                         .wrap('<p/>').parent().html();
             }
@@ -272,6 +283,12 @@ $( document ).ready(function() {
             title: 'Reason'
         }, ]
     });
+
+    $('.device-box .small-box-footer').click(function (e) {
+        table_filter_query = $(this).data('filter');
+        $filterTable.bootstrapTable('refresh');
+        return false;
+    })
 });
 
 </script>
